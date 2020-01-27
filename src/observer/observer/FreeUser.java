@@ -1,10 +1,14 @@
-package observer;
+package observer.observer;
 
 public class FreeUser implements Observer {
     private String name;
 
-    FreeUser(String name) {
+    public FreeUser(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     @Override

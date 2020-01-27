@@ -1,5 +1,10 @@
 package observer;
 
+import observer.observer.FreeUser;
+import observer.observer.Observer;
+import observer.observer.PremiumUser;
+import observer.publisher.YTChannel;
+
 public class App {
     public static void main(String[] args) {
         YTChannel channel = new YTChannel("Monika koduje");
@@ -16,6 +21,6 @@ public class App {
 
         channel.unregister(secondPremiumUser);
 
-        channel.releaseVideo("oblej wodą mamę");
+        channel.releaseVideo("oblej wodą mamę challenge");
     }
 }

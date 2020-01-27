@@ -1,4 +1,6 @@
-package observer;
+package observer.publisher;
+
+import observer.observer.Observer;
 
 public interface Publisher {
 

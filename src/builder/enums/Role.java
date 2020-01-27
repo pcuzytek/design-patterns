@@ -1,6 +1,6 @@
-package builder;
+package builder.enums;
 
-enum Role {
+public enum Role {
     Carry, Support, Nuker, Disabler, Jungler, Durable, Escape, Pusher, Initiator
 
 }

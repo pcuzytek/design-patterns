@@ -1,5 +1,9 @@
 package builder;
 
+import builder.enums.AttackType;
+import builder.enums.AttributeType;
+import builder.enums.Role;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,7 +41,7 @@ public class App {
                 .attributeType(AttributeType.Strength)
                 .description(PUDGE_DESCRIPTION)
                 .biography(PUDGE_BIOGRAPHY)
-                .attackType(AttackType.Mele)
+                .attackType(AttackType.Melee)
                 .attackSpeed(1.7)
                 .damageRange(new DamageRange(59, 65))
                 .attackRange(150)

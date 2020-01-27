@@ -1,5 +1,9 @@
 package builder;
 
+import builder.enums.AttackType;
+import builder.enums.AttributeType;
+import builder.enums.Role;
+
 import java.util.Map;
 
 class Character {
