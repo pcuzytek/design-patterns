@@ -8,28 +8,36 @@ import java.util.Map;
 
 class Character {
 
-    private String name;
-    private double health;
-    private double healthRegen;
-    private double mana;
-    private double manaRegen;
-    private AttributeType attributeType;
-    private String description;
-    private String biography;
+    private final String name;
 
-    private AttackType attackType;
-    private double attackSpeed;
-    private DamageRange damageRange;
-    private int attackRange;
+    // create it as a Health class
+    private final double health;
+    private final double healthRegen;
 
-    private double physicalArmour;
-    private double magicArmour;
+    // create it as a Mana class
+    private final double mana;
+    private final double manaRegen;
+    private final AttributeType attributeType;
+    private final String description;
+    private final String biography;
 
-    private int speed;
-    private double rotationSpeed;
-    private SightRange sightRange;
+    // create it as an Attack class
+    private final AttackType attackType;
+    private final double attackSpeed;
+    private final DamageRange damageRange;
+    private final int attackRange;
 
-    private Map<Role, Integer> roles;
+    // create it as a Armour class
+    private final double physicalArmour;
+    private final double magicArmour;
+
+    // create it as a Motion
+    private final int speed;
+    private final double rotationSpeed;
+
+    private final SightRange sightRange;
+
+    private final Map<Role, Integer> roles;
 
     private Character(Builder builder) {
         this.name = builder.name;

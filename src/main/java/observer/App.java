@@ -7,15 +7,17 @@ import observer.publisher.YTChannel;
 
 public class App {
     public static void main(String[] args) {
-        YTChannel channel = new YTChannel("Monika koduje");
+        var channel = new YTChannel("Monika koduje");
 
         Observer freeUser = new FreeUser("Damian");
-        Observer premiumUser = new PremiumUser("Michał");
-        Observer secondPremiumUser = new PremiumUser("Grzesiek");
-
         channel.register(freeUser);
+
+        Observer premiumUser = new PremiumUser("Michał");
         channel.register(premiumUser);
+
+        Observer secondPremiumUser = new PremiumUser("Grzesiek");
         channel.register(secondPremiumUser);
+
 
         channel.releaseVideo("śmieszny kotek haha");
 

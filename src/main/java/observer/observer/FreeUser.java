@@ -1,11 +1,6 @@
 package observer.observer;
 
-public class FreeUser implements Observer {
-    private String name;
-
-    public FreeUser(String name) {
-        this.name = name;
-    }
+public record FreeUser(String name) implements Observer {
 
     public String getName() {
         return this.name;
@@ -13,6 +8,6 @@ public class FreeUser implements Observer {
 
     @Override
     public void update() {
-        System.out.println(String.format("Hi %s you have new videos to watch!", name));
+        System.out.printf("Hi %s you have new videos to watch!%n", name);
     }
 }

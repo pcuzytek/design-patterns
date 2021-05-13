@@ -9,8 +9,8 @@ import java.util.List;
 
 public class YTChannel implements Publisher {
 
-    private String name;
-    private List<Observer> subscribers = new ArrayList<>();
+    private final String name;
+    private final List<Observer> subscribers = new ArrayList<>();
 
     public YTChannel(String name) {
         this.name = name;
@@ -18,20 +18,20 @@ public class YTChannel implements Publisher {
 
     @Override
     public void register(Observer observer) {
-        if(observer instanceof FreeUser) {
-            System.out.println(((FreeUser) observer).getName() + " subscribed your channel!");
-        } else if (observer instanceof PremiumUser) {
-            System.out.println(((PremiumUser) observer).getName() + " subscribed your channel!");
+        if (observer instanceof FreeUser freeUser) {
+            System.out.println(freeUser.getName() + " has subscribed your channel!");
+        } else if (observer instanceof PremiumUser premiumUser) {
+            System.out.println(premiumUser.getName() + "has subscribed your channel!");
         }
         subscribers.add(observer);
     }
 
     @Override
     public void unregister(Observer observer) {
-        if(observer instanceof FreeUser) {
-            System.out.println(((FreeUser) observer).getName() + " removed the free subscription!");
-        } else if (observer instanceof PremiumUser) {
-            System.out.println(((PremiumUser) observer).getName() + " removed the premium subscription!");
+        if (observer instanceof FreeUser freeUser) {
+            System.out.println(freeUser.getName() + " removed the free subscription!");
+        } else if (observer instanceof PremiumUser premiumUser) {
+            System.out.println(premiumUser.getName() + " removed the premium subscription!");
         }
         subscribers.remove(observer);
     }
@@ -42,7 +42,7 @@ public class YTChannel implements Publisher {
     }
 
     public void releaseVideo(String videoTitle) {
-        System.out.println(String.format("Channel %s has added a new video: %s", name, videoTitle));
+        System.out.printf("Channel %s has added a new video: %s%n", name, videoTitle);
         notifyAllObservers();
     }
 }

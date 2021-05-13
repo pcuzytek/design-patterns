@@ -26,10 +26,10 @@ public class App {
                 "Nawet Ci, którzy nie mają już strachu przed Żniwiarzem, wciąż boją się Rzeźnika.";
 
         Map<Role, Integer> pudgeRoles = new HashMap<>(4);
-        pudgeRoles.put(Role.Nuker, 1);
-        pudgeRoles.put(Role.Disabler, 2);
-        pudgeRoles.put(Role.Durable, 2);
-        pudgeRoles.put(Role.Initiator, 2);
+        pudgeRoles.put(Role.NUKER, 1);
+        pudgeRoles.put(Role.DISABLER, 2);
+        pudgeRoles.put(Role.DURABLE, 2);
+        pudgeRoles.put(Role.INITIATOR, 2);
 
 
         Character character = new Character.Builder()
@@ -38,10 +38,10 @@ public class App {
                 .healthRegen(3.1)
                 .mana(243)
                 .manaRegen(0.7)
-                .attributeType(AttributeType.Strength)
+                .attributeType(AttributeType.STRENGTH)
                 .description(PUDGE_DESCRIPTION)
                 .biography(PUDGE_BIOGRAPHY)
-                .attackType(AttackType.Melee)
+                .attackType(AttackType.MELEE)
                 .attackSpeed(1.7)
                 .damageRange(new DamageRange(59, 65))
                 .attackRange(150)

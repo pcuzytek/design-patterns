@@ -11,7 +11,7 @@ public class Day {
         actions = new ArrayList<>();
     }
 
-    public void record(Action action) {
+    public void recordAction(Action action) {
         actions.add(action);
     }
 

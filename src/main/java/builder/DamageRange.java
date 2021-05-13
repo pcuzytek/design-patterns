@@ -1,18 +1,10 @@
 package builder;
 
-public class DamageRange {
-    private int minDamage;
-    private int maxDamage;
-
-    public DamageRange(int minDamage, int maxDamage) {
-        this.minDamage = minDamage;
-        this.maxDamage = maxDamage;
-    }
+public record DamageRange(int minDamage, int maxDamage) {
 
     public int getMinDamage() {
         return minDamage;
     }
-
     public int getMaxDamage() {
         return maxDamage;
     }
